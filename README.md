@@ -1,3 +1,8 @@
+> **Inbox-Ready** is a lightweight, production-grade email kit built for real-world client testing — showcasing three responsive HTML templates (plus a donation appeal) that render consistently across Gmail, Outlook, and Apple Mail.
+
+[![Live Preview](https://img.shields.io/badge/Live%20Demo-inbox--ready--email--kit-blue)](https://dkranzmat.github.io/inbox-ready-email-kit/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 # Inbox-Ready — Responsive Email Code Kit
 
 Production-grade, table-based HTML email templates that render reliably across Gmail, Outlook (desktop/web), Apple Mail, and mobile clients. No build step required.
