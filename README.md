@@ -1,65 +1,82 @@
-> **Inbox-Ready** is a lightweight, production-grade email kit built for real-world client testing — showcasing three responsive HTML templates (plus a donation appeal) that render consistently across Gmail, Outlook, and Apple Mail.
+# Inbox-Ready — Responsive Email Code Kit
+
+> **Inbox-Ready** is a lightweight, production-grade email kit built for real-world client testing — showcasing four responsive HTML templates (Product Announcement, Newsletter, Transactional Receipt, and Appeal) that render consistently across Gmail, Outlook, and Apple Mail.
 
 [![Live Preview](https://img.shields.io/badge/Live%20Demo-inbox--ready--email--kit-blue)](https://dkranzmat.github.io/inbox-ready-email-kit/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-# Inbox-Ready — Responsive Email Code Kit
+---
 
-Production-grade, table-based HTML email templates that render reliably across Gmail, Outlook (desktop/web), Apple Mail, and mobile clients. No build step required.
+## 🧠 Tech Stack
 
-## What’s inside
-- **4 templates**: Product Announcement, Newsletter, Transactional Receipt, Appeal
-- **Shared partials**: header, footer, and a bulletproof button with VML fallback
-- **/dist**: ready-to-send HTML plus an index page for local preview
-- **Docs**: client quirks (Gmail clipping, Outlook gaps, dark mode) and fixes
+**Core:**  
+- Hand-coded responsive **HTML + table layouts** (no frameworks)  
+- **Inline CSS** with VML button fallbacks for Outlook  
+- **Modular partials:** header, footer, and reusable button block  
 
-## Quick start
-1. Open any HTML in `/dist` to preview locally.
-2. Customize content in `/src/templates` and copy changes into `/dist` when ready to send.
-3. Keep CSS **inline**. Avoid `<style>` blocks except for dark-mode helpers.
+**Tooling:**  
+- Built and tested locally — no build step required  
+- GitHub Pages for live preview  
+- Compatible with ESP imports (Campaign Monitor, Mailchimp, HubSpot, etc.)
 
-> Keep total HTML under **100 KB** to avoid Gmail clipping.
+**Rendering targets:**  
+- Gmail Web + Mobile  
+- Outlook (Desktop + New Web)  
+- Apple Mail / iOS Mail  
+- Dark-Mode adjustments where supported  
 
 ---
 
-## Client quirks & fixes (cheat sheet)
+## ⚙️ Usage
 
-### Gmail clipping (“View entire message”)
-- **Why**: message body over ~102KB.
-- **Fix**: Minify markup, remove comments, trim tracking querystrings, split long modules.
+1. **Preview online:**  
+   [Live Demo →](https://dkranzmat.github.io/inbox-ready-email-kit/)
 
-### Outlook (Windows) alignment/gaps
-- **Why**: Word rendering engine.
-- **Fixes**: use table layout with explicit `width` + `align`, prefer `padding` over `margin`, add spacer rows. For buttons, include **VML** fallback.
+2. **Use locally:**
+   ```bash
+   git clone https://github.com/DKranzMAT/inbox-ready-email-kit.git
+   cd inbox-ready-email-kit
+   open index.html
+   ```
 
-### Image gaps / blue links
-- Add `display:block` to `<img>` and `line-height:0` to container cells.
-- Neutralize auto-link coloring with `x-apple-data-detectors`, `u ~ div .email-container a` overrides.
+3. **Customize content:**
+   - Edit any template in `/src/templates/`
+   - Copy updated HTML into `/dist/` before sending
+   - Keep CSS inline and total file size under **100 KB** to avoid Gmail clipping
 
-### iOS zoom
-- Use a base body font-size ≥ 16px and design accordingly.
-
-### Dark mode
-- Inline explicit color on text and backgrounds.
-- Provide a dark-mode helper span or conditional styles for Apple/Gmail where supported.
-
----
-
-## Test checklist
-- Gmail Web (Chrome), Gmail iOS/Android
-- Outlook Desktop (Win), Outlook New/Legacy, Outlook Web
-- Apple Mail (macOS), iOS Mail
-- DPI scaling (Win @125%/150%), images on/off, link underlines, RTL sample
+4. **Test before launch:**
+   - Gmail Web + Mobile
+   - Outlook (Windows, Mac, New Web)
+   - Apple Mail / iOS
+   - Optional: Litmus or Email on Acid for full previews
 
 ---
 
-## Structure
+## 💬 Client Quirks & Fixes
+
+### Gmail clipping (“View entire message”)  
+- **Why:** message body over ~102 KB  
+- **Fix:** minify markup, remove comments, shorten tracking URLs, split long sections
+
+### Outlook (Windows) alignment & gaps  
+- **Why:** Word rendering engine  
+- **Fix:** table layout with explicit widths, use padding not margin, include VML button fallback
+
+### Image gaps / blue link styling  
+- Add `display:block` to images  
+- Use `line-height:0` on container cells  
+- Override auto-link colors with `x-apple-data-detectors` and Gmail dark-mode resets  
+
+---
+
+## 📂 Structure
+
 ```
 /src
   /partials
     header.html
     footer.html
-    button.html   (HTML + VML fallback)
+    button.html
   /templates
     product_announcement.html
     newsletter.html
@@ -67,13 +84,18 @@ Production-grade, table-based HTML email templates that render reliably across G
     appeal.html
 /dist
   index.html
-  product_announcement.html
-  newsletter.html
-  receipt.html
-  appeal.html
+  (ready-to-send templates)
 ```
 
 ---
 
-## Credits
-Adapted from years of client work and public learnings from the email community (e.g., Campaign Monitor, Litmus, MJML patterns). Licensed MIT.
+## 🧾 License
+MIT © 2025 — see [LICENSE](LICENSE)
+
+---
+
+## 👤 Author
+**David Kranz** — Front-End Developer  
+[Portfolio](https://davidkranzwordpress.com) · [GitHub](https://github.com/DKranzMAT) · Chicago, IL
+
+---
