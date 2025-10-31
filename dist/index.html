@@ -1,36 +1,109 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inbox-Ready Preview</title>
+  <meta name="viewport" content="width=device-width">
+  <title>Inbox-Ready — Email Kit Gallery</title>
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 16px; }
-    a.card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-decoration: none; color: #111827; display: block; }
-    .title { font-weight: 600; margin: 0 0 4px 0; }
-    .cap { color: #6b7280; font-size: 14px; margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, Arial, sans-serif;
+      background: #f9fafb;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #111827;
+      color: #fff;
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      margin: 40px 0 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+    .thumb {
+      background: #f3f4f6;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #9ca3af;
+    }
+    .card h2 {
+      font-size: 18px;
+      margin: 12px 16px 8px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #6b7280;
+      margin: 0 16px 16px;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #9ca3af;
+      padding: 24px;
+      border-top: 1px solid #e5e7eb;
+    }
   </style>
 </head>
 <body>
-  <h1>Inbox-Ready — Preview</h1>
+  <header>Inbox-Ready Email Kit</header>
+  <h1>📬 Responsive Email Template Gallery</h1>
+
   <div class="grid">
-    <a class="card" href="product_announcement.html" target="_blank">
-      <p class="title">Product Announcement</p>
-      <p class="cap">Hero + features + CTA</p>
+    <a href="product_announcement.html" class="card">
+      <div class="thumb">Product</div>
+      <h2>Product Announcement</h2>
+      <p>Promote a launch or feature update.</p>
     </a>
-    <a class="card" href="newsletter.html" target="_blank">
-      <p class="title">Newsletter</p>
-      <p class="cap">Two-column highlights</p>
+    <a href="newsletter.html" class="card">
+      <div class="thumb">Newsletter</div>
+      <h2>Newsletter</h2>
+      <p>Share updates and editorial content.</p>
     </a>
-    <a class="card" href="receipt.html" target="_blank">
-      <p class="title">Transactional Receipt</p>
-      <p class="cap">Order summary</p>
+    <a href="receipt.html" class="card">
+      <div class="thumb">Receipt</div>
+      <h2>Transactional Receipt</h2>
+      <p>Confirm purchases with clear details.</p>
     </a>
-    <a class="card" href="appeal.html" target="_blank">
-      <p class="title">Appeal</p>
-      <p class="cap">Cause-driven donation ask</p>
+    <a href="appeal.html" class="card">
+      <div class="thumb">Appeal</div>
+      <h2>Appeal / Donation</h2>
+      <p>Drive engagement or giving campaigns.</p>
     </a>
   </div>
+
+  <footer>
+    © 2025 Inbox-Ready Project by David Kranz — Built with HTML + Email-Safe CSS
+  </footer>
 </body>
 </html>
