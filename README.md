@@ -8,7 +8,7 @@
 ---
 
 <p align="center">
-  <img src=“inbox-ready.png" alt=“Responsive “Email Code Kit” width="800"/>
+  <img src=“inbox-ready.png" alt=“Responsive Email Code Kit” width="800"/>
 </p>
 
 ## 🧠 Tech Stack
